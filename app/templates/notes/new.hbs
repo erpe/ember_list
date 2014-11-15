@@ -1,0 +1,12 @@
+<h3>Create Note</h3>
+<div class="form-group">
+  <label>Title</label>
+  {{input type="text" placeholder="title" class="form-control" valueBinding="title"}}
+</div>
+<div class="form-group">
+  <label>body</label>
+  {{input type="text" placeholder="author" class="form-control" valueBinding="body"}}
+</div>
+<button {{action 'create'}} class="btn btn-primary"> Submit </button>
+<button {{action 'cancel'}} class="btn btn-primary"> Cancel </button>
+{{outlet}}

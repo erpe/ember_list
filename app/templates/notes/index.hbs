@@ -1,0 +1,14 @@
+<ul class='list-unstyled'>
+  {{#each}}
+    <li>
+      {{#link-to 'note' this}}
+        {{title}}
+      {{/link-to}}
+      
+      <span class='text-muted'>- {{createdAt}}</span>
+    </li>
+  {{else}}
+    <li>No notes found.</li>
+  {{/each}}
+</ul>
+

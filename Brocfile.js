@@ -17,4 +17,15 @@ var app = new EmberApp();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
-module.exports = app.toTree();
+// Bootstrap
+app.import('bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js');
+//app.import('node_modules/rails-csrf/config/environment.js');
+// Glyphicons
+var pickFiles = require('broccoli-static-compiler');
+var bootstrapFonts = pickFiles('bower_components/bootstrap-sass-official/assets/fonts/bootstrap', {
+  srcDir: '/',
+  destDir: '/fonts'
+});
+
+
+module.exports = app.toTree(bootstrapFonts);
