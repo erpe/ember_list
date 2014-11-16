@@ -8,7 +8,7 @@ NotesEditController = Ember.ObjectController.extend(
       @transitionToRoute('notes')
     
     cancel: ->
-      @transitionToRoute('notes')
+      @get('content').deleteRecord()
 )
 
 `export default NotesEditController`

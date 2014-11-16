@@ -5,7 +5,7 @@
 </div>
 <div class="form-group">
   <label>body</label>
-  {{input type="text" placeholder="author" class="form-control" valueBinding="body"}}
+  {{textarea valueBinding="body" class="form-control"}}
 </div>
 <button {{action 'create'}} class="btn btn-primary"> Submit </button>
 <button {{action 'cancel'}} class="btn btn-primary"> Cancel </button>
